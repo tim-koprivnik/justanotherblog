@@ -46,7 +46,7 @@
                 <!-- Side Widget (About me) Well -->
                 <div class="well">
                     <h4>About me</h4>
-                    <p>Just some random guy from the Earth, located in Milky Way Galaxy, living his little pity life, and, in the meantime, messing around with justanother blog.</p>
+                    <p>Just some random guy from the Earth, located in Milky Way Galaxy, living his little meaningless life, and, in the meantime, messing around with #justanother blog. :)</p>
                 </div>
 
             </div>

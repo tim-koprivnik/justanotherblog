@@ -15,18 +15,24 @@
                     <h2>
                         <a href="{{route('justanotherblog.post', $post->slug)}}">{{$post->title}}</a>
                     </h2>
+
                     <p class="lead">
                         by <i>{{$post->user->name}}</i>
                     </p>
+
                     <p><span class="glyphicon glyphicon-time"></span> Posted {{$post->created_at ? $post->created_at->diffForHumans() : $post->created_at}}</p>
-                    <hr>
+                    
                     <img class="img-responsive img-rounded" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/900x300'}}" alt="">
-                    <hr>
+                    
+                    <br>
+
                     {{-- <p class="text-justify font-weight-light">{{str_limit($post->body, 450)}}</p> --}}
                     <p class="text-justify font-weight-light">{!! str_limit($post->body, 450) !!}</p>
                         <!--that way TinyMCE works -->
                     <a class="btn btn-primary" href="{{route('justanotherblog.post', $post->slug)}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    
                     <hr>
+
                 @endforeach
 
                 <!-- Pagination -->
@@ -39,6 +45,4 @@
             </div>
             {{-- /.col-md-8" --}}
                 
-    
-
 @endsection

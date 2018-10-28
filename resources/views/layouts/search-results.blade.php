@@ -5,11 +5,6 @@
     <!-- Custom CSS -->
     <link href="css/blog-post.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-image: url('/public/images/background.jpg');
-        }
-    </style>
 
 @extends('layouts.header')
     
@@ -43,7 +38,7 @@
                         </table>
                     </div>
             @else
-                <h3>No results</h3>
+                <p>Sorry, no results found.</p>
             @endif
 
         </div>

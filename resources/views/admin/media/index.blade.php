@@ -10,11 +10,11 @@
                 {{csrf_field()}}
                 {{method_field("post")}}
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <select name="checkBoxArray" id="" class="form-control">
                             <option value="">Delete</option>
                         </select>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group">
                         <input type="submit" name="delete_selected" value="Delete Selected Files" class="btn btn-danger">
@@ -35,7 +35,7 @@
                             <tbody>
                                 @foreach ($photos as $photo)
                                     <tr>
-                                        <td><input class="checkBoxes" type="checkbox" name="checkBoxArray[]" value="{{$photo->id}}"></th>
+                                        <td><input class="checkBoxes" type="checkbox" name="checkBoxArray" value="{{$photo->id}}"></th>
                                         <td>{{$photo->id}}</td>
                                         <td><img height="100" width="120" class="img-rounded" src="{{$photo ? $photo->file : 'No photo'}}" alt=""></td>
                                         <td>{{$photo->created_at ? $photo->created_at->diffForHumans() : $photo->created_at}}</td>
@@ -58,7 +58,7 @@
 @stop
 
 
-
+<!--For selecting boxes -->
 @section('scripts')
 
 <script>
