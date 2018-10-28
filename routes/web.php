@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/home', ['as'=>'justanotherblog.home', 'uses'=>'HomeController@index']);
 
+
 //For admin(s) only
 Route::group(['middleware'=>'admin'], function() {
     Route::get('/admin', 'AdminController@index');
@@ -36,12 +37,11 @@ Route::group(['middleware'=>'admin'], function() {
     Route::resource('/admin/comments/replies', 'CommentsRepliesController');
 });
 
+
 //For everyone
 Route::get('/post/{slug}', ['as'=>'justanotherblog.post', 'uses'=>'PostsController@post']);
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
-Route::post('/admin/delete/media', 'MediaController@deleteMedia');
 
 Route::get('/search', function(Request $request) {
     $results = App\Post::search($request->search)->get();
