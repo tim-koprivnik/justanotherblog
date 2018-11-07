@@ -50,9 +50,9 @@ class MediaController extends Controller
 
         $name = $file->getClientOriginalName();
 
-        $file->move('images', $name);
+        $file->move('images', $name); //move file/photo to folder 'images' with the name '$name'
 
-        Photo::create(['file'=>$name]);
+        Photo::create(['file'=>$name]); //create file/photo in table 'photos'
     }
 
     /**

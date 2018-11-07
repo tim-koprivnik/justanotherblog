@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->timestamps();
 
-            //"user_id" from "posts" table references "id" on "users" table
+            //"user_id" from table "posts" references "id" in table "users"
             //if we delete a user, all posts from this user will be deleted as well
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
