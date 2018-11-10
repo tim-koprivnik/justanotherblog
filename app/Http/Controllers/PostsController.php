@@ -139,14 +139,13 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        unlink(public_path() . $post->photo->file); //deletes/unlinks photo/file from "images" folder
+        //DOES NOT WORK !!!
+        // unlink(public_path() . $post->photo->file); //deletes/unlinks photo/file from "images" folder
 
             // $file_path = public_path() . '/' . $post->photo->file;
             // unlink($file_path);
 
         $post->delete();
-
-        // I WANT TO ALSO DELETE "file" from "photos" folder !!!!!!!!!!!
 
         return redirect('admin/posts');
     }
