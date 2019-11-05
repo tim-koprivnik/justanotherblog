@@ -25,7 +25,7 @@
             </thead>
             <tbody>
                 @if($users)
-                {{-- "$users" refers to variable "$users" in "UsersController@index" (line 16) --}}
+                {{-- "$users" refers to variable "$users" in "UsersController@index" (line 26) --}}
                     @foreach ($users as $user) 
                         <tr>
                             <td>{{$user->id}}</td>

@@ -23,8 +23,9 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
             //"user_id" from table "posts" references "id" in table "users"
-            //if we delete a user, all posts from this user will be deleted as well
+                //if we delete a user, all posts from this user will be deleted as well
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('category_id')->referenses('id')->on('categories'); //NOT SET YET
         });
     }
 
