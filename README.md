@@ -1,3 +1,3 @@
 # justanotherblog
 
-CMS, made in PHP (Laravel).
+CMS in PHP (Laravel).
